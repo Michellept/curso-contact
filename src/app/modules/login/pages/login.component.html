@@ -1,0 +1,28 @@
+<div class="container-main">
+
+    <div class="card-container">
+        <div class="card">
+          <span class="loader"></span>
+            <form>
+                <div class="form-group" formGroup="formLogin">
+                    <label>Usuario</label> <br>
+                    <input class="input-custom " matInput type="email" formControlName="userEmail">
+                    <small *ngIf="isValidField('userEmail')" class="text-danger">Este campos es obligatorio</small>
+                    <br>
+                    <label>Contraseña</label> <br>
+                    <input class="input-custom" matInput type="password" formControlName="userPassword"> <br>
+                    <small *ngIf="isValidField('userPassword')" class="text-danger">Este campos es obligatorio</small>
+
+                    <div [ngStyle]="{'display': 'flex', 'justify-content': 'center', 'align-items': 'center'}" >
+                        <button class="btn btn-primary mt-5"  type="button" (click)="login()">
+                            Ingresar
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
